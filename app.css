@@ -1,0 +1,188 @@
+.roll {
+  background-image: url("roll.png");
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  animation: spin 10s linear infinite;
+}
+
+#right-roll {
+  top: -305px;
+  left: 427px;
+}
+
+#left-roll {
+  top: -334px;
+  left: 363px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.speaker {
+  width: 180px;
+  height: 180px;
+  background-image: url("speaker.png");
+  background-size: 100% 100%;
+  position: relative;
+  animation: bit 0.25s linear infinite;
+}
+#left-speaker {
+  top: -353px;
+  left: 94px;
+}
+
+#right-speaker {
+  top: -529px;
+  left: 540px;
+}
+
+@keyframes bit {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.disco-row {
+  display: flex;
+}
+
+.square {
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
+  animation: changeColor 3s infinite;
+}
+
+.disco-row:nth-of-type(even) .square:nth-of-type(5n) {
+  animation-delay: 1s;
+}
+
+.disco-row:nth-of-type(odd) .square:nth-of-type(5n) {
+  animation-delay: 0.1s;
+}
+
+.disco-row:nth-of-type(even) .square:nth-of-type(5n + 1) {
+  animation-delay: 0.73s;
+}
+
+.disco-row:nth-of-type(odd) .square:nth-of-type(5n + 1) {
+  animation-delay: 0.33s;
+}
+
+.disco-row:nth-of-type(even) .square:nth-of-type(5n + 2) {
+  animation-delay: 0.8s;
+}
+
+.disco-row:nth-of-type(odd) .square:nth-of-type(5n + 2) {
+  animation-delay: 0.12s;
+}
+
+.disco-row:nth-of-type(odd) .square:nth-of-type(5n + 3) {
+  animation-delay: 0.75s;
+}
+
+.disco-row:nth-of-type(even) .square:nth-of-type(5n + 3) {
+  animation-delay: 0.15s;
+}
+
+.disco-row:nth-of-type(odd) .square:nth-of-type(5n + 4) {
+  animation-delay: 0.63s;
+}
+
+.disco-row:nth-of-type(even) .square:nth-of-type(5n + 4) {
+  animation-delay: 0.35s;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: yellow;
+  }
+  10% {
+    background-color: red;
+  }
+  20% {
+    background-color: greenyellow;
+  }
+  30% {
+    background-color: blue;
+  }
+  40% {
+    background-color: violet;
+  }
+  50% {
+    background-color: cyan;
+  }
+  60% {
+    background-color: magenta;
+  }
+  70% {
+    background-color: deepskyblue;
+  }
+  80% {
+    background-color: crimson;
+  }
+  90% {
+    background-color: yellowgreen;
+  }
+  100% {
+    background-color: purple;
+  }
+}
+
+party {
+  max-width: 1100px;
+  min-width: 800px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0, 100, 32);
+}
+
+.recorder {
+  margin-left: 50px;
+  margin-bottom: -400px;
+}
+
+.dancer {
+  background-image: url("dancer.png");
+  background-size: 100% 100%;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: -400px;
+  animation: dance 1s infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: translate(10px);
+  }
+  25% {
+    transform: translate(50px);
+  }
+  50% {
+    transform: translate(30px);
+  }
+  75% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(10px);
+  }
+}
